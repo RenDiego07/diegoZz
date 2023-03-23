@@ -20,4 +20,5 @@ public class Constantes {
     public static String RUTASERVICIOSDELETED = "Archivos/ServicesRemoved.ser";
     public static String RUTAORDENESLOPEZ = "Archivos/OrdenesL.ser";
     public static String RUTAORDENESBARCOS = "Archivos/OrdenesB.ser";
+    public static String GITHUB  = "hOLAAZZ";
 }
