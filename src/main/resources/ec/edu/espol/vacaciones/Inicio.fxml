@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.vacaciones.InicioController">
+   <children>
+      <AnchorPane fx:id="anchor" prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <ImageView fx:id="Portada" fitHeight="400.0" fitWidth="450.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="219.0" layoutY="60.0" text="Iniciar Sesion" textFill="#e39d1e">
+               <font>
+                  <Font name="Bell MT" size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUser" layoutX="269.0" layoutY="120.0" />
+            <TextField fx:id="txtPassword" layoutX="268.0" layoutY="164.0" />
+            <Label layoutX="225.0" layoutY="124.0" text="User" textFill="#f007b8" />
+            <Label layoutX="212.0" layoutY="168.0" text="Password" textFill="#d109ed" />
+            <Button fx:id="Iniciar" layoutX="327.0" layoutY="208.0" mnemonicParsing="false" onAction="#Logear" text="Iniciar" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
