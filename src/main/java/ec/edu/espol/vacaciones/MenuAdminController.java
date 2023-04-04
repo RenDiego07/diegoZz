@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
 package ec.edu.espol.vacaciones;
-
+import java.text.SimpleDateFormat;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -53,7 +53,7 @@ public class MenuAdminController implements Initializable {
     private VBox midVBox;
     @FXML
     private HBox bottomHBox;
-
+  
     
     
     
@@ -67,6 +67,7 @@ public class MenuAdminController implements Initializable {
     private ArrayList<Cliente> clientsRemoved;
     private ArrayList<Proveedor> proveedoresRemoved;
     private TableView<Servicio>TB1;
+    
 
 
 
@@ -81,19 +82,15 @@ public class MenuAdminController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         fillComboBox();
-        
+        date();
         clientsRemoved = new ArrayList<>();
         
         proveedoresRemoved = new ArrayList<>();
         
         servicesRemoved = new ArrayList<>();
+ 
 
 
-        
-        
-        
-        
-  
         //lProveedores = Proveedor.getProveedores();
         //lClients = Cliente.getClients();
         //lServices =Servicio.getServices();
@@ -741,7 +738,16 @@ public class MenuAdminController implements Initializable {
 
    //---------------------Fin adminsitrar Servicios----------------------------//
    // falta mostrar la opcion de si de verdad queremos eliminar el proveedor, cliente o Servicio
-
+   // Creando Fecha//
    
    
+   public void date(){
+       Date fecha = new Date();
+       SimpleDateFormat txt = new  SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z");
+       String txtFecha = txt.format(fecha);
+       Label portadaFecha = new Label(txtFecha);
+       bottomHBox.setAlignment(Pos.BOTTOM_CENTER);
+       bottomHBox.getChildren().add(portadaFecha);
+       
+   }
 }
